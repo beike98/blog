@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>刘蓓科的个人博客</title>
+    <link>http://121.5.195.173/blog/</link>
+    <description>Recent content on 刘蓓科的个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 07 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://121.5.195.173/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5分钟使用Hugo搭建个人网站</title>
+      <link>http://121.5.195.173/blog/posts/21070701/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://121.5.195.173/blog/posts/21070701/</guid>
+      <description>Hugo 是一个用 Go 编写的静态网站生成器，一般只需几秒钟就能生成一个网站（每页少于 1 毫秒），被称为“世界上最快的网站构建框架”，也使 Hugo 大受欢迎，成为最热门的静态网站生成器之一，被广泛采用。
+ 安装Hugo  brew install hugo //采用Homebrew方式 创建站点  hugo new site blog //在当前目录创建名为blog的站点 添加主题
+本站采用了PaperMod主题，更多主题列表可参阅https://themes.gohugo.io/  //进入至blog/themes/使用git拉取主题： git clone git@github.com:adityatelange/hugo-PaperMod.git //在blog/config.toml配置文件中进行主题配置： theme = &amp;quot;hugo-PaperMod&amp;quot; 添加文章内容
+在blog/content/posts目录下创建你的md文档，并且可以在文档开头声明一下文档名称和日期。例如：  --- title: &amp;quot;My First Post&amp;quot; date: 2020-05-20 --- 运行serve以便于进行调试预览  hugo server //在你的站点根目录运行 构建静态页面以便于发布  hugo //在你的站点根目录运行 最后，就可在blog/public目录下找到你构建的静态页面啦！</description>
+    </item>
+    
+  </channel>
+</rss>
