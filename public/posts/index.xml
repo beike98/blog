@@ -6,11 +6,21 @@
     <description>Recent content in Posts on 刘蓓科的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 07 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://121.5.195.173/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://121.5.195.173/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>什么是闭包？</title>
+      <link>http://121.5.195.173/posts/21070702/</link>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://121.5.195.173/posts/21070702/</guid>
+      <description>我理解的闭包：在作用域外部能够访问其作用域内部的变量，就构成闭包。
+ 举例说明 const foo = () =&amp;gt; { console.log(&amp;#34;hi&amp;#34;) }   </description>
+    </item>
+    
     <item>
       <title>5分钟使用Hugo搭建个人网站</title>
       <link>http://121.5.195.173/posts/21070701/</link>
-      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>http://121.5.195.173/posts/21070701/</guid>
       <description>Hugo 是一个用 Go 编写的静态网站生成器，一般只需几秒钟就能生成一个网站（每页少于 1 毫秒），被称为“世界上最快的网站构建框架”，也使 Hugo 大受欢迎，成为最热门的静态网站生成器之一，被广泛采用。
