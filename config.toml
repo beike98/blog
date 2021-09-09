@@ -1,4 +1,4 @@
-baseURL = "http://121.5.195.173/blog/"
+baseURL = "http://121.5.195.173/"
 languageCode = "zh-CN"
 title = "刘蓓科的个人博客"
 theme = "hugo-PaperMod"
