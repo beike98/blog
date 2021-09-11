@@ -40,14 +40,8 @@
   width: 26px;
 }
 
-@font-face {
-  font-family: "Fira Code";
-  src: url("/font/FiraCode-Retina.ttf");
-}
-
 code {
   direction: ltr;
-  font-family: "Fira Code";
 }
 
 div.highlight,

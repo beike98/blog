@@ -120,6 +120,15 @@ img {
   max-width: 100%;
 }
 
+@font-face {
+  font-family: "Fira Code";
+  src: url("/font/FiraCode-Retina.ttf");
+}
+
+code {
+  font-family: "Fira Code";
+}
+
 ::-webkit-scrollbar-track {
   background: 0 0;
 }

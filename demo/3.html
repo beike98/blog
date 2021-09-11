@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">抽奖</button>
+    <script>
+      //Promise初体验
+      const btn = document.querySelector("#btn");
+      btn.addEventListener("click", () => {
+        const p = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const n = Math.ceil(Math.random() * 100); //
+            if (n < 30) {
+              resolve(n);
+            } else {
+              reject(n);
+            }
+          }, 1500);
+        });
+
+        p.then(
+          (value) => {
+            alert("恭喜你，中奖啦！中奖号码为：" + value);
+          },
+          (reason) => {
+            alert("再接再厉！当前号码为：" + reason);
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

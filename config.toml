@@ -1,7 +1,7 @@
-baseURL = "http://121.5.195.173/"
+baseURL = "http://liubeike.com/"
 languageCode = "zh-CN"
 title = "刘蓓科的个人博客"
 theme = "hugo-PaperMod"
 [params.homeInfoParams]
-Title = "Welcome to my blog"
-Content = "求知若渴，虚怀若谷。"
+Title = "求知若渴，虚怀若谷。"
+Content = "对本博客内容有任何疑问，欢迎反馈邮箱：liubeike99@gmail.com"
