@@ -165,14 +165,14 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>浅析函数防抖与函数节流
+    <h2>代码解释函数防抖与函数节流
     </h2>
   </header>
   <section class="entry-content">
-    <p>正在编辑</p>
+    <p>//函数防抖：事件被触发n秒后再执行，如果在n秒内连续触发，只执行最后一次。 //大白话：公交车到站牌关门，如果一直有乘客上车，那么需要等最后一次乘客上车后，再进行关门。 //使用场景：用于input输入框的格式验证，浏览器窗口大小调整。 function debounce(fn, delay) { let timerId = null; return () =&gt; { const context = this; if (timerId) { window.clearTimeout(timerId); } timerId = setTimeout(() =&gt; { fn.apply(context, arguments); timerId = null; }, delay); }; } //函数节流：限制一个函数在规定时间内只能执行一次。 //大白话：游戏里的技能，就算手按的再快，也只能在冷却时间内只释放一次。 //使用场景：监听滚动条，例如滑到底部自动加载更多内容。 function throttle(fn, delay) { let canUse = true; return () =&gt; { if (canUse) { fn.apply(this, arguments); canUse = false; setTimeout(() =&gt; (canUse = true), delay); } }; } //防抖测试：1s内频繁点击只执行最后一次 const button_D = document....</p>
   </section>
   <footer class="entry-footer">July 5, 2021</footer>
-  <a class="entry-link" aria-label="post link to 浅析函数防抖与函数节流" href="http://liubeike.com/posts/210705/"></a>
+  <a class="entry-link" aria-label="post link to 代码解释函数防抖与函数节流" href="http://liubeike.com/posts/210705/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -185,7 +185,7 @@
  pending 实例化时的默认状态 fulfilled 成功时的状态 rejected 失败时的状态    Promise的两个常用方法
  Promise.all( )：接收一个Promise实例数组参数，返回一个新的Promise，所有参数必须都成功才能成功，只要其中一个失败就会直接失败。 Promise.race( )：接收一个Promise实例数组参数，返回一个新的Promise，第一个完成的Promise的结果状态就是最终的结果状态，如果全部失败才会失败。    async与await
  async函数：函数的返回值是一个Promise对象，此Promise对象的结果是此函数执行的返回值决定的。 await表达式：一般情况下，await右侧接一个Promise对象，返回的是此Promise成功的值。    示例：
-//使用Promise封装一个AJAX网络请求函数  const sendAJAX = (url) =&gt; { return new Promise((resolve, reject) =&gt; { const xhr = new XMLHttpRequest(); xhr.open(&#34;GET&#34;, url); xhr.send(); xhr.onreadystatechange = () =&gt; { if (xhr.readyState === 4) { if (xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 300) { resolve(xhr....</p>
+//使用Promise封装一个AJAX网络请求函数  function sendAJAX(url) { return new Promise((resolve, reject) =&gt; { const xhr = new XMLHttpRequest(); xhr.open(&#34;GET&#34;, url); xhr.send(); xhr.onreadystatechange = () =&gt; { if (xhr.readyState === 4) { if (xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 300) { resolve(xhr.response); } else { reject(xhr....</p>
   </section>
   <footer class="entry-footer">July 4, 2021</footer>
   <a class="entry-link" aria-label="post link to 浅析Promise、AJAX" href="http://liubeike.com/posts/210704/"></a>
@@ -197,7 +197,7 @@
     </h2>
   </header>
   <section class="entry-content">
-    <p>我理解的闭包：在作用域外部能够访问其作用域内部的变量，就构成闭包。  举例说明 const f1 = () =&gt; { let n = 1; const f2 = () =&gt; { n&#43;=1; console.log(n); } return f2; } const foo = f1(); foo();//2  闭包的优点与缺点  优点：可以隐藏函数内部的实现细节，只暴露一个返回值供外部访问。 缺点：在IE浏览器下，可能会导致内存泄漏。    </p>
+    <p>我理解的闭包：在作用域外部能够访问其作用域内部的变量，就构成闭包。  举例说明 function f1() { let n = 1; function f2() { n &#43;= 1; console.log(n); } return f2; } const foo = f1(); foo(); //2  闭包的优点与缺点  优点：可以隐藏函数内部的实现细节，只暴露一个返回值供外部访问。 缺点：在IE浏览器下，可能会导致内存泄漏。    </p>
   </section>
   <footer class="entry-footer">July 3, 2021</footer>
   <a class="entry-link" aria-label="post link to 简述闭包" href="http://liubeike.com/posts/210703/"></a>
