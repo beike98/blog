@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="d">防抖测试：1s内频繁点击只执行最后一次</button>
+    <hr />
+    <button id="t">节流测试：频繁点击每隔1s才会执行一次</button>
+    <script>
+      //函数防抖：事件被触发n秒后再执行，如果在n秒内连续触发，只执行最后一次。
+      //大白话：公交车到站牌关门，如果一直有乘客上车，那么需要等最后一次乘客上车后，再进行关门。
+      //使用场景：用于input输入框的格式验证，浏览器窗口大小调整。
+      function debounce(fn, delay) {
+        let timerId = null;
+        return () => {
+          const context = this;
+          if (timerId) {
+            window.clearTimeout(timerId);
+          }
+          timerId = setTimeout(() => {
+            fn.apply(context, arguments);
+            timerId = null;
+          }, delay);
+        };
+      }
+      //函数节流：限制一个函数在规定时间内只能执行一次。
+      //大白话：游戏里的技能，就算手按的再快，也只能在冷却时间内只释放一次。
+      //使用场景：监听滚动条，例如滑到底部自动加载更多内容。
+      function throttle(fn, delay) {
+        let canUse = true;
+        return () => {
+          if (canUse) {
+            fn.apply(this, arguments);
+            canUse = false;
+            setTimeout(() => (canUse = true), delay);
+          }
+        };
+      }
+      //测试
+      const d = document.querySelector("#d");
+      d.addEventListener(
+        "click",
+        debounce(() => {
+          console.log("防抖事件执行了！");
+        }, 1000)
+      );
+      const t = document.querySelector("#t");
+      t.addEventListener(
+        "click",
+        throttle(() => {
+          console.log("节流事件执行了！");
+        }, 1000)
+      );
+    </script>
+  </body>
+</html>

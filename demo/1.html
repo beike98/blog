@@ -9,14 +9,14 @@
   <body>
     <script>
       //闭包
-      const f1 = () => {
+      function f1() {
         let n = 1;
-        const f2 = () => {
+        function f2() {
           n += 1;
           console.log(n);
-        };
+        }
         return f2;
-      };
+      }
       const foo = f1();
       foo(); //2
     </script>
