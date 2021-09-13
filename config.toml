@@ -1,6 +1,6 @@
 baseURL = "http://liubeike.com/"
 languageCode = "zh-CN"
-title = "刘蓓科的个人博客"
+title = "Baker的个人博客"
 theme = "hugo-PaperMod"
 [params.homeInfoParams]
 Title = "求知若渴，虚怀若谷。"

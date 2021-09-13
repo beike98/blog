@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>刘蓓科的个人博客</title>
+<title>Baker的个人博客</title>
 
 <meta name="description" content="">
 <meta name="author" content="">
@@ -20,20 +20,20 @@
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.85.0" />
 <link rel="alternate" type="application/rss+xml" href="http://liubeike.com/index.xml">
-<meta property="og:title" content="刘蓓科的个人博客" />
+<meta property="og:title" content="Baker的个人博客" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://liubeike.com/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="刘蓓科的个人博客"/>
+<meta name="twitter:title" content="Baker的个人博客"/>
 <meta name="twitter:description" content=""/>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "刘蓓科的个人博客",
+  "name": "Baker的个人博客",
   "url": "http://liubeike.com/",
   "description": "",
   "thumbnailUrl": "http://liubeike.com/favicon.ico",
@@ -96,7 +96,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://liubeike.com/" accesskey="h" title="刘蓓科的个人博客 (Alt + H)">刘蓓科的个人博客</a>
+            <a href="http://liubeike.com/" accesskey="h" title="Baker的个人博客 (Alt + H)">Baker的个人博客</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -141,26 +141,18 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>如何实现一个深拷贝？
+    <h2>同源策略以及跨域解决方案
     </h2>
   </header>
   <section class="entry-content">
-    <p>正在编辑</p>
-  </section>
-  <footer class="entry-footer">July 7, 2021</footer>
-  <a class="entry-link" aria-label="post link to 如何实现一个深拷贝？" href="http://liubeike.com/posts/210707/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>说说跨域的那些事儿
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>正在编辑</p>
+    <p> 什么是同源策略？
+同源策略（same-origin policy）是一种出于浏览器安全方面的考虑而出台的一种策略，它可以保证用户信息的安全，防止恶意的网站窃取。所谓同源是指“协议&#43;域名&#43;端口”三者相同。 同源策略限制的内容有：  Cookie、LocalStorage、IndexedDB等存储性内容 DOM节点 AJAX请求发送后，结果被浏览器拦截了   特别注意：AJAX跨域请求是可以正常发出去并返回结果的，只是结果被浏览器拦截了。
+  允许跨域加载资源的三个标签 &lt;img src=&#34;/&#34;&gt; &lt;link href=&#34;/&#34;&gt; &lt;script src=&#34;/&#34;&gt;  跨域解决方案一，使用CORS。
+服务端设置Access-Control-Allow-Origin即可开启CORS跨域访问。 跨域解决方案二，使用JSONP。
+JSONP是通过 script 标签加载数据的方式去获取数据，当做 JS 代码来执行。 提前在页面上声明一个函数，函数名通过接口传参的方式传给后台，后台解析到函数名后在原始数据上「包裹」这个函数名，发送给前端。  </p>
   </section>
   <footer class="entry-footer">July 6, 2021</footer>
-  <a class="entry-link" aria-label="post link to 说说跨域的那些事儿" href="http://liubeike.com/posts/210706/"></a>
+  <a class="entry-link" aria-label="post link to 同源策略以及跨域解决方案" href="http://liubeike.com/posts/210706/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -197,7 +189,7 @@
     </h2>
   </header>
   <section class="entry-content">
-    <p>我理解的闭包：在作用域外部能够访问其作用域内部的变量，就构成闭包。  举例说明 function f1() { let n = 1; function f2() { n &#43;= 1; console.log(n); } return f2; } const foo = f1(); foo(); //2  闭包的优点与缺点  优点：可以隐藏函数内部的实现细节，只暴露一个返回值供外部访问。 缺点：在IE浏览器下，可能会导致内存泄漏。    </p>
+    <p>能够访问内部作用域的变量，就构成闭包。  举例说明 function f1() { let n = 1; function f2() { n &#43;= 1; console.log(n); } return f2; } const foo = f1(); foo(); //2  闭包的优点与缺点  优点：可以隐藏函数内部的实现细节，只暴露一个返回值供外部访问。 缺点：在IE浏览器下，可能会导致内存泄漏。    </p>
   </section>
   <footer class="entry-footer">July 3, 2021</footer>
   <a class="entry-link" aria-label="post link to 简述闭包" href="http://liubeike.com/posts/210703/"></a>
@@ -209,7 +201,11 @@
     </h2>
   </header>
   <section class="entry-content">
-    <p>每个对象都会在其内部初始化一个属性，就是prototype(原型)。 当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，而这个prototype又会有自己的prototype，于是就这样一直找下去，形成了原型链。  每个对象都有一个__proto__属性，并且指向它的prototype原型对象 每个构造函数都有一个prototype原型对象,prototype原型对象里的constructor指向构造函数本身   关于prototype与__proto__容易让人疑惑的点是，构造函数也有__proto__属性。之所以会这样，是因为构造函数也是一个对象，它是构造函数Function()的实例对象。因此，所有构造函数的__proto__属性都指向Function构造函数的原型对象。同时，原型对象是特殊的对象，每个构造函数的原型对象都会有一个__proto__属性，共同指向构造函数Object()的原型对象。构造函数Object()的原型对象，作为除自身以外被所有原型对象指向的对象，其担当着根节点的角色，它的__proto__属性指向null。
+    <p>JS公式：对象.__proto__===其构造函数.prototype 根公理：Object.prototype是所有对象(直接或间接)的原型 函数公理：所有函数都是由Function构造的，包括Object/Array/Function   每个对象都会在其内部初始化一个属性，就是prototype(原型)。
+  当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，而这个prototype又会有自己的prototype，于是就这样一直找下去，形成了原型链。
+  每个对象都有一个__proto__属性，并且指向它的prototype原型对象.
+  每个构造函数都有一个prototype原型对象,prototype原型对象里的constructor指向构造函数本身
+   关于prototype与__proto__容易让人疑惑的点是，构造函数也有__proto__属性。之所以会这样，是因为构造函数也是一个对象，它是构造函数Function()的实例对象。因此，所有构造函数的__proto__属性都指向Function构造函数的原型对象。同时，原型对象是特殊的对象，每个构造函数的原型对象都会有一个__proto__属性，共同指向构造函数Object()的原型对象。构造函数Object()的原型对象，作为除自身以外被所有原型对象指向的对象，其担当着根节点的角色，它的__proto__属性指向null。
  </p>
   </section>
   <footer class="entry-footer">July 2, 2021</footer>
@@ -232,7 +228,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="http://liubeike.com/">刘蓓科的个人博客</a></span>
+    <span>&copy; 2021 <a href="http://liubeike.com/">Baker的个人博客</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
