@@ -1,4 +1,4 @@
-baseURL = "http://liubeike.com/"
+baseURL = "https://liubeike.com/blog/"
 languageCode = "zh-CN"
 title = "Baker的个人博客"
 theme = "hugo-PaperMod"
